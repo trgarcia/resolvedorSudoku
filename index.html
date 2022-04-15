@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <body class="bg-info text-white">
+  <center>
+  <h1>Solucionador de Sudoku</h1>
+  
+	<div id="teste" class="container border rounded bg-light text-dark pt-3 pb-3"style="line-height:3;column-width:4;text-align:center">
+		<div class="row">
+		
+		<div class="col">
+		
+		<div class="row m-0 p-0"  style="max-width:495px" >
+		
+			<div class="col m-0 p-0 border-left border-top" style="border-style: solid;">
+			<div class="row m-0 p-0">
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input00" maxlength="1" size="1" style="text-align:center; width:54px"/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0; ">
+				  <input id="input01" maxlength="1" size="1" style="text-align:center; width:54px"/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input02" maxlength="1" size="1" style="text-align:center; width:54px"/>
+				</div>
+				
+			</div>
+			<div class="row m-0 p-0">
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input03" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input04" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input05" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				
+			</div>
+			<div class="row m-0 p-0">
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input06" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input07" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input08" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				
+			</div>
+			</div>
+			<div class="col m-0 p-0 border-left border-top" style="border-style: solid;">
+			<div class="row m-0 p-0">
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input10" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input11" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input12" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				
+			</div>
+			<div class="row m-0 p-0">
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input13" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input14" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input15" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				
+			</div>
+			<div class="row m-0 p-0">
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input16" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input17" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input18" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				
+			</div>
+			</div>
+			<div class="col m-0 p-0 border-top border-left-0 border-right-0" style="border-style: solid;">
+			<div class="row m-0 p-0">
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input20" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input21" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input22" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				
+			</div>
+			<div class="row m-0 p-0">
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input23" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input24" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input25" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				
+			</div>
+			<div class="row m-0 p-0">
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input26" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input27" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input28" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				
+			</div>
+			</div>
+			</div>
+			
+			
+			
+			<div class="row m-0 p-0"  style="max-width:495px" >
+		
+			<div class="col m-0 p-0 border-left border-top" style="border-style: solid;">
+			<div class="row m-0 p-0">
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input30" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input31" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input32" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				
+			</div>
+			<div class="row m-0 p-0">
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input33" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input34" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input35" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				
+			</div>
+			<div class="row m-0 p-0">
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input36" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input37" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input38" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				
+			</div>
+			</div>
+			<div class="col m-0 p-0 border-left border-top" style="border-style: solid;">
+			<div class="row m-0 p-0">
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input40" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input41" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input42" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				
+			</div>
+			<div class="row m-0 p-0">
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input43" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input44" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input45" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				
+			</div>
+			<div class="row m-0 p-0">
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input46" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input47" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input48" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				
+			</div>
+			</div>
+			<div class="col m-0 p-0 border-top border-left-0 border-right-0" style="border-style: solid;">
+			<div class="row m-0 p-0">
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input50" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input51" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input52" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				
+			</div>
+			<div class="row m-0 p-0">
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input53" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input54" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input55" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				
+			</div>
+			<div class="row m-0 p-0">
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input56" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input57" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input58" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				
+			</div>
+			</div>
+			</div>
+			
+			
+			<div class="row m-0 p-0"  style="max-width:496px" >
+		
+			<div class="col m-0 p-0 border-left border-bottom border-top" style="border-style: solid;">
+			<div class="row m-0 p-0">
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input60" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input61" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input62" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				
+			</div>
+			<div class="row m-0 p-0">
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input63" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input64" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input65" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				
+			</div>
+			<div class="row m-0 p-0">
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input66" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input67" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input68" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				
+			</div>
+			</div>
+			<div class="col m-0 p-0 border-left border-bottom border-top" style="border-style: solid;">
+			<div class="row m-0 p-0">
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input70" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input71" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input72" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				
+			</div>
+			<div class="row m-0 p-0">
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input73" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input74" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input75" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				
+			</div>
+			<div class="row m-0 p-0">
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input76" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input77" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input78" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				
+			</div>
+			</div>
+			<div class="col m-0 p-0 border-left border-bottom border-top border-right" style="border-style: solid;">
+			<div class="row m-0 p-0">
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input80" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input81" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input82" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				
+			</div>
+			<div class="row m-0 p-0">
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input83" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input84" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input85" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				
+			</div>
+			<div class="row m-0 p-0">
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input86" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input87" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				<div class="col-sm m-0 p-0 pr-0 pl-0" style="flex-grow:0;">
+				  <input id="input88" maxlength="1" size="1" style="text-align:center; width:54px "/>
+				</div>
+				
+			</div>
+			</div>
+			</div>
+			
+				
+			
+			</div>
+			
+			<div class="col d-flex flex-column justify-content-center pr-5 mr-5 ">
+				<div class="align-middle pr-5 mr-5">
+				<button type="button" class="btn btn-success btn-lg btn-block " onclick="preencheTabuleiro()">Resolver</button>
+				</br>
+				<button type="button" class="btn btn-secondary btn-lg btn-block" onclick="limpar()">Limpar</button>
+				</div>
+			</div>
+		</div>
+		
+		</div>
+		
+		
+		
+		
+		
+	
+</center>
+	<script>
+		var jogo = new Array(9);
+		
+		function imprime(){
+			for( let x = 0; x < 9; x++ ){
+				for( let y = 0; y<9 ; y++ ){
+					console.log(document.getElementById("input"+x+""+y).value);
+				}
+			}
+			
+		}
+		
+		function preencheVariavel(){
+			for( let x = 0; x < 9; x++ ){
+				jogo[x]=[];
+				for( let y = 0; y<9 ; y++ ){
+					jogo[x][y] = document.getElementById("input"+x+""+y).value;
+				}
+			}
+			
+			console.log(jogo);
+			
+		}
+		
+		function preencheTabuleiro(){
+			
+			jogo = [['1', '1', '8', '8', '8', '8', '', '', ''],
+					['', '', '2', '', '', '', '', '', ''],
+					['', '', '', '', '', '', '', '', ''],
+					['', '', '3', '', '', '', '', '', ''],
+					['', '', '', '', '', '', '', '', ''],
+					['', '', '5', '7', '', '', '', '', ''],
+					['', '', '', '', '', '', '', '', ''],
+					['', '', '', '', '', '', '', '', ''],
+					['', '', '', '', '', '', '', '', '']];
+			
+			for( let x = 0; x < 9; x++ ){
+				
+				for( let y = 0; y<9 ; y++ ){
+					document.getElementById("input"+x+""+y).value=jogo[x][y];
+				}
+			}
+			
+			
+			
+		}
+		
+		function limpar(){
+			for( let x = 0; x < 9; x++ ){
+				
+				for( let y = 0; y<9 ; y++ ){
+					document.getElementById("input"+x+""+y).value='';
+				}
+			}
+			
+			
+			
+		}
+	</script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
